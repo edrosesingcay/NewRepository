@@ -1,0 +1,206 @@
+
+<!-- saved from url=(0057)file:///C:/Users/Andrew.CEBU/Desktop/Singcay/timeSet.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+</head>
+<body>
+	<div class="timeDive">                  
+                    Time
+                        <select name="select-choice-1" class="selectStyle" id="time" style="width:95%; text-align:center;">
+                            <option value="11:00:00 AM">11:00 AM</option>
+                            <option value="11:15:00 AM">11:15 AM</option>
+                            <option value="11:30:00 AM">11:30 AM</option>
+                            <option value="11:45:00 AM">11:45 AM</option>
+                            <option value="12:00:00 PM">12:00 PM</option>
+                            <option value="12:15:00 PM">12:15 PM</option>
+                            <option value="12:30:00 PM">12:30 PM</option>
+                            <option value="12:45:00 PM">12:45 PM</option>
+                            <option value="1:00:00 PM">1:00 PM</option>
+                            <option value="1:15:00 PM">1:15 PM</option>
+                            <option value="1:30:00 PM">1:30 PM</option>
+                            <option value="1:45:00 PM">1:45 PM</option>
+                            <option value="2:00:00 PM">2:00 PM</option>
+                            <option value="2:15:00 PM">2:15 PM</option>
+                            <option value="2:30:00 PM">2:30 PM</option>
+                            <option value="2:45:00 PM">2:45 PM</option>
+                            <option value="3:00:00 PM">3:00 PM</option>
+                            <option value="3:15:00 PM">3:15 PM</option>
+                            <option value="3:30:00 PM">3:30 PM</option>
+                            <option value="3:45:00 PM">3:45 PM</option>
+                            <option value="4:00:00 PM">4:00 PM</option>
+                            <option value="4:15:00 PM">4:15 PM</option>
+                            <option value="4:30:00 PM">4:30 PM</option>
+                            <option value="4:45:00 PM">4:45 PM</option>
+                            <option value="5:00:00 PM">5:00 PM</option>
+                            <option value="5:15:00 PM">5:15 PM</option>
+                            <option value="5:30:00 PM">5:30 PM</option>
+                            <option value="5:45:00 PM">5:45 PM</option>
+                            <option value="6:00:00 PM">6:00 PM</option>
+                            <option value="6:15:00 PM">6:15 PM</option>
+                            <option value="6:30:00 PM">6:30 PM</option>
+                            <option value="6:45:00 PM">6:45 PM</option>
+                            <option value="7:00:00 PM">7:00 PM</option>
+                            <option value="7:15:00 PM">7:15 PM</option>
+                            <option value="7:30:00 PM">7:30 PM</option>
+                            <option value="7:45:00 PM">7:45 PM</option>
+                            <option value="8:00:00 PM">8:00 PM</option>
+                            <option value="8:15:00 PM">8:15 PM</option>
+                            <option value="8:30:00 PM">8:30 PM</option>
+                            <option value="8:45:00 PM">8:45 PM</option>
+                            <option value="9:00:00 PM">9:00 PM</option>
+                            <option value="9:15:00 PM">9:15 PM</option>
+                            <option value="9:30:00 PM">9:30 PM</option>
+                            <option value="9:45:00 PM">9:45 PM</option>
+                            <option value="10:00:00 PM">10:00 PM</option>
+                            <option value="10:15:00 PM">10:15 PM</option>
+                            <option value="10:30:00 PM">10:30 PM</option>
+                            <option value="10:45:00 PM">10:45 PM</option>
+                            <option value="11:00:00 PM">11:00 PM</option>
+                        </select>
+                    
+                </div>
+<script type="text/javascript">
+		
+	function toDate(dateString) {
+   var timeComponents = dateString.replace(/\s.*$/, '').split(':');
+
+    if (dateString.indexOf("PM") > -1) {
+		if(timeComponents[0] != 12){
+			timeComponents[0] += 12;
+	   }
+    }
+	else{
+		if(timeComponents[0] == 12){
+			timeComponents[0] = 0;
+		}
+	}
+
+    var date = new Date();
+	date.set
+    date.setHours(timeComponents[0]);
+    date.setMinutes(timeComponents[1]);
+    date.setSeconds(timeComponents[2]);
+
+    return date;
+	}
+	
+	//if (toDate('12:15:00 AM') > toDate('12:00:00 AM')) {
+	// alert("true");
+	//}
+	//else{
+	
+	// alert("false");
+	// alert(toDate('04:30:47 PM'));
+	// alert(toDate('12:00:01 PM'));
+	//}
+		
+/*		var x=new Date();
+	x.setFullYear(2012,0,14);
+	var currentTime = new Date()
+	var hours = currentTime.getHours()
+	var minutes = currentTime.getMinutes()
+	//var numberOfChoices = window.document.form1.timeSelect;
+	var today = new Date();
+
+	if (x>today)
+	  {
+	  alert("Today is before 14th January 2012");
+	  }
+	else
+	  {
+	  alert("Today is after 14th January 2012");
+	 // alert(numberOfChoices.length);
+	  alert(hours + ":" + minutes );
+	  
+	  }
+*/
+//var selectitems = document.getElementById("time");
+//var items = selectitems.getElementsByTagName("option");
+//document.write('<p>The number is '+ items.length +'</p>');
+// alert("1");
+
+			//<--
+			var a_p = "";
+			var d = new Date();
+			var curr_hour = d.getHours();
+			if (curr_hour < 12)
+			   {
+				a_p = "AM";
+			   }
+			else
+			   {
+			    a_p = "PM";
+			   }
+			if (curr_hour == 0)
+			   {
+			   curr_hour = 12;	   
+			   }
+			if (curr_hour > 12)
+			   {
+			   curr_hour = curr_hour - 12;  
+			   }
+			var curr_min = d.getMinutes();
+
+			curr_min = curr_min + "";
+
+			if (curr_min.length == 1)
+			   {
+			   curr_min = "0" + curr_min;
+			   }
+			var curr_sec = d.getSeconds();
+			 //document.write(curr_hour + " : " + curr_min + " " + a_p);
+				var cTime = curr_hour + ":" + curr_min + ":" + curr_sec + " " + a_p;
+				alert(cTime);
+			//-->
+			
+	var length = document.getElementById("time").options.length;
+	for(i=0;i<length;i++){
+		var selectValue = time.options[i].value;
+		if(time.options[i+1] == undefined){
+			var selectNextValue = time.options[0].value;
+			var selection3rdValue = time.options[0].value;
+		}
+		else
+		{
+			var selectNextValue = time.options[i+1].value;
+			var selection3rdValue = time.options[i+2].value;
+			//alert(selectNextValue);
+			//alert(selectNextValue);
+		}
+		if(toDate(selectValue) >= toDate(cTime) && toDate(cTime) <= toDate(selectNextValue)){
+			
+			if(toDate(cTime) < toDate('11:00:00 AM')){
+				time.selectedIndex = 0;
+			}
+			else{
+				time.selectedIndex = i+1;
+				alert(selectValue);
+			}
+			//alert(selectValue);
+			//alert(cTime);
+			//alert(selectNextValue);
+			i = length;
+			
+		}
+	}
+	
+//	function toDate(dateString){
+//		var timeComponents = dateString.replace(/\s.*$/, '').split(':');
+
+//    if (dateString.indexOf("PM") > -1 && timeComponents[0] != 12) {
+      // if(timeCtimeComponents[0] == 12){
+//	   timeComponents[0] += 12;
+		//}
+	  // else
+//	}
+
+//		var date = new Date();
+//		date.setHours(timeComponents[0]);
+//		date.setMinutes(timeComponents[1]);
+//		date.setSeconds(timeComponents[2]);
+//		return date;
+//	}
+</script>
+
+</body></html>
